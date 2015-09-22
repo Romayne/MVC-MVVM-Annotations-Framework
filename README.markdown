@@ -27,7 +27,8 @@ Copyright and Ownership
 ====================
 The ASP.NET MVC, IIS, Apache, phpdoc name, and any other terms used are copyright to their original authors.
 
-Contact
+Live Demo and Contact
 ====================
 
+Live demo at [http://calgarywebdev.com/domains/mvc/welcome/](http://calgarywebdev.com/domains/mvc/welcome/)
 Contact directly at [info@calgarywebdev.com](info@calgarywebdev.com).
