@@ -27,7 +27,7 @@
                 </p>
 
                 <?php $this->bindStart();?>
-                    <?php include("application/views/forms/Person/person.php");?>
+                    <?php $this->renderFormView("Person", "person");?>
                 <?php $this->bindEnd();?>
             </div>
             <div id="ExampleViewModelAnnotatedController" class="col-md-12 example-panel hidden">

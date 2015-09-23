@@ -425,6 +425,34 @@
 				$this->displayErrors = false;
 			}
 		}
+
+        /**
+         * Renders the form body
+         *
+         * @param string             $location the location of the form view
+         * @param string             $file the actual form file
+         * @return Mixed
+         */
+        public function renderFormView($location, $file)
+        {
+            try
+            {
+                if (!file_exists("application/views/forms/" .$location ."/" .$file .".php") && !file_exists("application/views/forms/" .$location ."/" .$file .".form.php"))
+                    throw new Exception($location ."/" .$file .".php or " .$location ."/" .$file ."form.php form does not exist");
+
+                if (file_exists("application/views/forms/" .$location ."/" .$file .".php"))
+                    include("application/views/forms/" .$location ."/" .$file .".php");
+                else if (file_exists("application/views/forms/" .$location ."/" .$file .".form.php"))
+                    include("application/views/forms/" .$location ."/" .$file .".form.php");
+            }
+            catch (Exception $e)
+            {
+                if ($this->displayErrors)
+                    Functions::dump($e->getMessage());
+
+                $this->displayErrors = false;
+            }
+        }
 		
 		/**
          * Renders the view body
