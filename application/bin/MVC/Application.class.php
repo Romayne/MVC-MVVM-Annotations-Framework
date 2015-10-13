@@ -71,8 +71,8 @@
 
                 $url = str_replace("?" . $_SERVER['QUERY_STRING'], "", $url);
 
-                $currentAction = (strpos($url, "/") === false) ? "index" : str_replace("/", "_", substr($url, strpos($url, "/") + 1, strlen($url)));
-                $currentAction = (empty($currentAction)) ? "index" : $currentAction;
+                $currentAction = (strpos($url, "/") === false) ? "__index" : str_replace("/", "_", substr($url, strpos($url, "/") + 1, strlen($url)));
+                $currentAction = (empty($currentAction)) ? "__index" : $currentAction;
                 $currentAction = ($currentAction[strlen($currentAction) - 1] == "_") ? substr($currentAction, 0, -1) : $currentAction;
             }
 
