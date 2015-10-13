@@ -162,7 +162,7 @@
          *
          * @return string
          */
-		public function __indexAction()
+		public function indexAction()
 		{
 			echo "Welcome to the " .$this->__get("controllerName") ." default Action.<br>
 				 To overwrite this message, create an indexAction() method in the current " .$this->__get("controllerName") ."!";
